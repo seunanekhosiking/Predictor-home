@@ -145,26 +145,24 @@
     <div>
     <select id="team1">
         
-        <option selected value="1">ManCity</option>
-        <option value="2">Tottenham</option>
-        <option value="3">Liverpool</option>
-        <option value="4">Arsenal</option>
-        <option value="5">Brighton</option>
-        <option value="6">WestHam</option>
-        <option value="7">AstonVilla</option>
-        <option value="8">Nottingham</option>
-        <option value="9">CrystalPalace</option>
-        <option value="10">Fulham</option>
-        <option value="11">Brentford</option>
-        <option value="12">Newcastle</option>
-        <option value="13">ManUnited</option>
-        <option value="14">Chelsea</option>
-        <option value="15">Bournemount</option>
-        <option value="16">Wolverhamptom</option>
-        <option value="17">Sheffield</option>
-        <option value="18">Everton</option>
-        <option value="19">Burnley</option>
-        <option value="20">Luton</option>
+        <option selected value="1">Leverkusen</option>
+        <option  value="2">BMunich</option>
+        <option value="3">Leipzig</option>
+        <option value="4">Stuttgart</option>
+        <option value="5">Hoffenheim</option>
+        <option value="6">Wolfsburg</option>
+        <option value="7">Dortmund</option>
+        <option value="8">UnionBerlin</option>
+        <option value="9">Frankfurt</option>
+        <option value="10">Freiburg</option>
+        <option value="11">Heidenheim</option>
+        <option value="12">Bremen</option>
+        <option value="13">Bochum</option>
+        <option value="14">Mgladbach</option>
+        <option value="15">Augsburg</option>
+        <option value="16">Cologne</option>
+        <option value="17">Darmstadt</option>
+        <option value="18">Mainz</option>
         
     </select><br>
     <label for="team1">Home Team</label>
@@ -172,21 +170,21 @@
     <h3>__vs__</h3>
     <div>
     <select id="team2">
-        <option value="1">ManCity</option>
-        <option selected value="2">Tottenham</option>
-        <option value="3">Liverpool</option>
-        <option value="4">Arsenal</option>
-        <option value="5">Brighton</option>
-        <option value="6">WestHam</option>
-        <option value="7">AstonVilla</option>
-        <option value="8">Nottingham</option>
-        <option value="9">CrystalPalace</option>
-        <option value="10">Fulham</option>
-        <option value="11">Brentford</option>
-        <option value="12">Newcastle</option>
-        <option value="13">ManUnited</option>
-        <option value="14">Chelsea</option>
-        <option value="15">Bournemount</option>
+        <option value="1">Leverkusen</option>
+        <option selected value="2">BMunich</option>
+        <option value="3">Leipzig</option>
+        <option value="4">Stuttgart</option>
+        <option value="5">Hoffenheim</option>
+        <option value="6">Wolfsburg</option>
+        <option value="7">Dortmund</option>
+        <option value="8">UnionBerlin</option>
+        <option value="9">Frankfurt</option>
+        <option value="10">Freiburg</option>
+        <option value="11">Heidenheim</option>
+        <option value="12">Bremen</option>
+        <option value="13">Bochum</option>
+        <option value="14">Mgladbach</option>
+        <option value="15">Augsburg</option>
         <option value="16">Cologne</option>
         <option value="17">Darmstadt</option>
         <option value="18">Mainz</option>
@@ -213,7 +211,7 @@
         function predictMatch() {
             const Leverkusen = 1;
             const BMunich = 2;
-            const Leipzip = 3;
+            const Leipzig = 3;
             const Stuttgart = 4;
             const Hoffenheim = 5;
             const Wolfsburg = 6;
@@ -248,60 +246,53 @@
 net.train([
     // Training data
         // WEEK 32
-    { input: [Burnley,ManCity], output: [1] },
-    { input: [Arsenal,Nottingham], output: [0] },
-    { input: [Bournemount,WestHam], output: [0.5] },
-    { input: [Everton,Fulham], output: [1] },
-    { input: [Brighton,Luton], output: [0] },
-    { input: [Sheffield,CrystalPalace], output: [1] },
-    { input: [Newcastle,AstonVilla], output: [0] },
-    { input: [Brentford,Tottenham], output: [0.5] },
-    { input: [Chelsea,Liverpool], output: [0.5] },
-    { input: [ManUnited,Wolverhamptom], output: [0] },
-    { input: [Nottingham,Sheffield], output: [0] },
-    { input: [Liverpool,Bournemount], output: [0] },
-    { input: [Fulham,Brentford], output: [1] },
-    { input: [Wolverhamptom,Brighton], output: [1] },
-    { input: [Tottenham,ManUnited], output: [0] },
-    { input: [ManCity,Newcastle], output: [0] },
-    { input: [AstonVilla,Everton], output: [0] },
-    { input: [WestHam,Chelsea], output: [0] },
-    { input: [CrystalPalace,Arsenal], output: [1] },
-    { input: [Chelsea,Luton], output: [0] },
-    { input: [Bournemount,Tottenham], output: [1] },
-    { input: [Everton,Wolverhamptom], output: [1] },
-    { input: [Brentford,CrystalPalace], output: [0.5] },
-    { input: [Arsenal,Fulham], output: [0.5] },
-    { input: [ManUnited,Nottingham], output: [0] },
-    { input: [Brighton,WestHam], output: [1] },
-    { input: [Burnley,AstonVilla], output: [1] },
-    { input: [Sheffield,ManCity], output: [1] },
-    { input: [Newcastle,Liverpool], output: [1] },
-    { input: [Luton,WestHam], output: [1] },
-    { input: [Sheffield,Everton], output: [0.5] },
-    { input: [ManCity,Fulham], output: [0] },
-    { input: [Brentford,Tottenham], output: [0.5] },
-    { input: [Chelsea,Nottingham], output: [1] },
-    { input: [Burnley,Tottenham], output: [1] },
-    { input: [Brighton,Newcastle], output: [0] },
-    { input: [Liverpool,AstonVilla], output: [0] },
-    { input: [CrystalPalace,Wolverhamptom], output: [0] },
-    { input: [Arsenal,ManUnited], output: [0] },
-    { input: [Wolverhamptom,Liverpool], output: [1] },
-    { input: [Fulham,Luton], output: [0] },
-    { input: [Tottenham,Sheffield], output: [0] },
-    { input: [ManUnited,Brighton], output: [1] },
-    { input: [WestHam,ManCity], output: [1] },
-    { input: [AstonVilla,CrystalPalace], output: [0] },
-    { input: [Newcastle,Brentford], output: [0] },
-    { input: [Bournemount,Chelsea], output: [0.5] },
-    { input: [Everton,Arsenal], output: [1] },
-    { input: [Nottingham,Burnley], output: [0.5] }
-    //{ input: [CrystalPalace,Fulham], output: [1] },
-    //{ input: [ManCity,Nottingham], output: [0] },
-    //{ input: [Luton,Wolverhamptom], output: [0.5] },
-    //{ input: [Brentford,Everton], output: [0] },
-    //{ input: [Burnley,ManUnited], output: [0.5] }
+    { input: [Bremen,BMunich], output: [1] },
+    { input: [Wolfsburg,Heidenheim], output: [0] },
+    { input: [Hoffenheim,Freiburg], output: [1] },
+    { input: [Leverkusen,Leipzig], output: [0] },
+    { input: [Augsburg,Mgladbach], output: [0.5] },
+    { input: [Stuttgart,Bochum], output: [0] },
+    { input: [Dortmund,Cologne], output: [0] },
+    { input: [UnionBerlin,Mainz], output: [0] },
+    { input: [Frankfurt,Darmstadt], output: [0] },
+    { input: [Leipzig,Stuttgart], output: [0] },
+    { input: [Cologne,Wolfsburg], output: [1] },
+    { input: [Freiburg,Bremen], output: [0] },
+    { input: [Darmstadt,UnionBerlin], output: [1] },
+    { input: [Bochum,Dortmund], output: [0.5] },
+    { input: [Heidenheim,Hoffenheim], output: [1] },
+    { input: [Mgladbach,Leverkusen], output: [1] },
+    { input: [Mainz,Frankfurt], output: [0.5] },
+    { input: [BMunich,Augsburg], output: [0] },
+    { input: [Dortmund,Heidenheim], output: [0.5] },
+    { input: [Augsburg,Bochum], output: [0.5] },
+    { input: [Stuttgart,Freiburg], output: [0] },
+    { input: [Bremen,Mainz], output: [0] },
+    { input: [Leverkusen,Darmstadt], output: [0] },
+    { input: [Hoffenheim,Wolfsburg], output: [0] },
+    { input: [Mgladbach,BMunich], output: [1] },
+    { input: [Frankfurt,Cologne], output: [0.5] },
+    { input: [UnionBerlin,Leipzig], output: [1] },
+    { input: [BMunich,Leverkusen], output: [0.5] },
+    { input: [Cologne,Hoffenheim], output: [1] },
+    { input: [Freiburg,Dortmund], output: [1] },
+    { input: [Wolfsburg,UnionBerlin], output: [1] },
+    { input: [Mainz,Stuttgart], output: [1] },
+    { input: [Leipzig,Augsburg], output: [0] },
+    { input: [Bochum,Frankfurt], output: [0.5] },
+    { input: [Heidenheim,Bremen], output: [0] },
+    { input: [Darmstadt,Mgladbach], output: [0.5] },
+    { input: [Stuttgart,Darmstadt], output: [0] },
+    { input: [Augsburg,Mainz], output: [0] },
+    { input: [BMunich,Bochum], output: [0] },
+    { input: [UnionBerlin,Hoffenheim], output: [1] },
+    { input: [Mgladbach,Leipzig], output: [1] },
+    { input: [Dortmund,Wolfsburg], output: [0] },
+    { input: [Bremen,Cologne], output: [0] },
+    { input: [Leverkusen,Heidenheim], output: [0] },
+    { input: [Frankfurt,Freiburg], output: [0.5] }
+    
+    
    
    
 
@@ -317,11 +308,16 @@ net.train([
                 
                 
                 let predictionMessage;
-    if (output < 0.2) {
+    if (output < 0.1) {
         predictionMessage = `Prediction: Home Win`;
-    } else if (output > 0.8) {
+    } else if (output > 0.1 && output<0.3) {
+        predictionMessage =  `Prediction: Home/Draw Win`;
+    }else if (output > 0.7 && output<0.9) {
+        predictionMessage =  `Prediction: Away/Draw Win`;
+    }else if (output > 0.9) {
         predictionMessage =  `Prediction: Away Win`;
-    } else {
+    }
+     else {
         predictionMessage = `Prediction: Draw`;
     }
 

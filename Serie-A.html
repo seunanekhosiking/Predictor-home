@@ -319,11 +319,16 @@ net.train([
                 
                 
                 let predictionMessage;
-    if (output < 0.2) {
+   if (output < 0.1) {
         predictionMessage = `Prediction: Home Win`;
-    } else if (output > 0.8) {
+    } else if (output > 0.1 && output<0.3) {
+        predictionMessage =  `Prediction: Home/Draw Win`;
+    }else if (output > 0.7 && output<0.9) {
+        predictionMessage =  `Prediction: Away/Draw Win`;
+    }else if (output > 0.9) {
         predictionMessage =  `Prediction: Away Win`;
-    } else {
+    }
+     else {
         predictionMessage = `Prediction: Draw`;
     }
 

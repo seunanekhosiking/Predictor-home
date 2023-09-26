@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier League Predictor</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+   
+    <style>
+       
+       html {
+        display:flex;
+        background: no-repeat center linear-gradient(to bottom, #000000, #600060);
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+       }
+       body { 
+        display:flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+       }
+    .shadow-box {
+            background-color: #500050;
+            width: 90%;
+            height: 80%;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            font-family: Arial, sans-serif;
+            color: #000;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            justify-content: center;
+            align-items: center;   
+    }
+  
+    .logo {
+            background-color: #fff;
+            border-radius: 4px;
+            width: 45px;
+            height: 45px;
+        }
+        .title {
+        
+            height: 45px;
+
+        }
+       h3 {
+        font-size: 15px;
+        margin: 0px;
+        padding: 0px;
+        padding-left: 5px;
+       }
+
+       p {
+        font-size: 10px;
+        margin: 0px;
+        padding: 0px;
+        padding-top: 3px;
+        padding-left: 5px;
+       }
+       .Prediction {
+        color: #fff;
+        font-size: 15px;
+        margin: 0px;
+        padding: 0px;
+        padding-top: 50px;
+        padding-left: 5px;
+        font-weight: 700;
+       }
+       .predictButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+       
+       }
+        .head {
+            display: flex;
+            height: 45px;
+            color: #fff;
+            justify-content: center;
+            align-items: center;
+        }
+      .teams {
+        display: flex;
+        margin-top: 15px;
+        justify-content: center;
+            align-items: center;
+      }
+      .home-sci a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 0.1px solid #fff;
+  font-size: 20px;
+  
+  color: #fff;
+  text-decoration: none;
+  margin: 5px 10px 0px 0;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  
+}
+.home-sci a:hover {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 20px #fff;
+}
+@keyframes slideRight {
+  0% {
+   transform: translateX(-500px);
+   opacity: 0;
+   }
+   100% {
+     transform: translateX(0px);
+     opacity: 1;
+     }
+ }
+    </style>
+</head>
+<body>
+    <div class="shadow-box">
+    <div class="head">
+        <div class="logo">
+    <img src="https://www.bing.com/th?id=OSB.9ZxSIExo340HqhwymNqFLw--.png&w=50&h=50&qlt=90&o=6&dpr=2&pid=BingSports" alt="cat" width="45" height="45">
+         </div>
+         <div class="title">
+    <h3>Premier League Predictor</h3>
+    
+    <p><span id="element"></span></p>
+    </div>
+    </div>
+    <div class="teams">
+    <div>
+    <select id="team1">
+        
+        <option selected value="1">ManCity</option>
+        <option value="2">Tottenham</option>
+        <option value="3">Liverpool</option>
+        <option value="4">Arsenal</option>
+        <option value="5">Brighton</option>
+        <option value="6">WestHam</option>
+        <option value="7">AstonVilla</option>
+        <option value="8">Nottingham</option>
+        <option value="9">CrystalPalace</option>
+        <option value="10">Fulham</option>
+        <option value="11">Brentford</option>
+        <option value="12">Newcastle</option>
+        <option value="13">ManUnited</option>
+        <option value="14">Chelsea</option>
+        <option value="15">Bournemount</option>
+        <option value="16">Wolverhamptom</option>
+        <option value="17">Sheffield</option>
+        <option value="18">Everton</option>
+        <option value="19">Burnley</option>
+        <option value="20">Luton</option>
+        
+    </select><br>
+    <label for="team1">Home Team</label>
+    </div>
+    <h3>__vs__</h3>
+    <div>
+    <select id="team2">
+        <option value="1">ManCity</option>
+        <option selected value="2">Tottenham</option>
+        <option value="3">Liverpool</option>
+        <option value="4">Arsenal</option>
+        <option value="5">Brighton</option>
+        <option value="6">WestHam</option>
+        <option value="7">AstonVilla</option>
+        <option value="8">Nottingham</option>
+        <option value="9">CrystalPalace</option>
+        <option value="10">Fulham</option>
+        <option value="11">Brentford</option>
+        <option value="12">Newcastle</option>
+        <option value="13">ManUnited</option>
+        <option value="14">Chelsea</option>
+        <option value="15">Bournemount</option>
+        <option value="16">Wolverhamptom</option>
+        <option value="17">Sheffield</option>
+        <option value="18">Everton</option>
+        <option value="19">Burnley</option>
+        <option value="20">Luton</option>
+    </select><br>
+    <label for="team2">Away Team</label>
+    </div>
+    </div>
+    <div class="predictButton">
+    <button id="predictButton">Predict</button>
+   
+        <a href="login.html"> <input type="submit" value="Back"></a>
+      
+
+    </form>
+</div>
+
+    <p class="Prediction" id="prediction">Prediction:</p>
+    <div class="home-sci">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-whatsapp'></i></a>
+        <a href="#"><i class='bx bxl-tiktok'></i></a>
+     </div>
+   </div>
+    <script>
+        // Function to predict the match result
+        function predictMatch() {
+            const ManCity = 1;
+            const Tottenham = 2;
+            const Liverpool = 3;
+            const Arsenal = 4;
+            const Brighton = 5;
+            const WestHam = 6;
+            const AstonVilla = 7;
+            const Nottingham = 8;
+            const CrystalPalace = 9;
+            const Fulham = 10;
+            const Brentford = 11;
+            const Newcastle = 12;
+            const ManUnited = 13;
+            const Chelsea = 14;
+            const Bournemount = 15;
+            const Wolverhamptom = 16;
+            const Sheffield = 17;
+            const Everton = 18;
+            const Burnley = 19;
+            const Luton = 20;
+    
+    
+            const team1Value = parseFloat(document.getElementById('team1').value);
+            const team2Value = parseFloat(document.getElementById('team2').value);
+
+            // Load Brain.js from the CDN
+            const script = document.createElement('script');
+            script.src = 'https://unpkg.com/brain.js';
+            script.async = true;
+            script.onload = function () {
+                // Create a neural network
+                const net = new brain.NeuralNetwork();
+
+                // Train the network with historical data
+               // Train the network with historical data
+net.train([
+    // Training data
+        // WEEK 32
+    { input: [Burnley,ManCity], output: [1] },
+    { input: [Arsenal,Nottingham], output: [0] },
+    { input: [Bournemount,WestHam], output: [0.5] },
+    { input: [Everton,Fulham], output: [1] },
+    { input: [Brighton,Luton], output: [0] },
+    { input: [Sheffield,CrystalPalace], output: [1] },
+    { input: [Newcastle,AstonVilla], output: [0] },
+    { input: [Brentford,Tottenham], output: [0.5] },
+    { input: [Chelsea,Liverpool], output: [0.5] },
+    { input: [ManUnited,Wolverhamptom], output: [0] },
+    { input: [Nottingham,Sheffield], output: [0] },
+    { input: [Liverpool,Bournemount], output: [0] },
+    { input: [Fulham,Brentford], output: [1] },
+    { input: [Wolverhamptom,Brighton], output: [1] },
+    { input: [Tottenham,ManUnited], output: [0] },
+    { input: [ManCity,Newcastle], output: [0] },
+    { input: [AstonVilla,Everton], output: [0] },
+    { input: [WestHam,Chelsea], output: [0] },
+    { input: [CrystalPalace,Arsenal], output: [1] },
+    { input: [Chelsea,Luton], output: [0] },
+    { input: [Bournemount,Tottenham], output: [1] },
+    { input: [Everton,Wolverhamptom], output: [1] },
+    { input: [Brentford,CrystalPalace], output: [0.5] },
+    { input: [Arsenal,Fulham], output: [0.5] },
+    { input: [ManUnited,Nottingham], output: [0] },
+    { input: [Brighton,WestHam], output: [1] },
+    { input: [Burnley,AstonVilla], output: [1] },
+    { input: [Sheffield,ManCity], output: [1] },
+    { input: [Newcastle,Liverpool], output: [1] },
+    { input: [Luton,WestHam], output: [1] },
+    { input: [Sheffield,Everton], output: [0.5] },
+    { input: [ManCity,Fulham], output: [0] },
+    { input: [Brentford,Tottenham], output: [0.5] },
+    { input: [Chelsea,Nottingham], output: [1] },
+    { input: [Burnley,Tottenham], output: [1] },
+    { input: [Brighton,Newcastle], output: [0] },
+    { input: [Liverpool,AstonVilla], output: [0] },
+    { input: [CrystalPalace,Wolverhamptom], output: [0] },
+    { input: [Arsenal,ManUnited], output: [0] },
+    { input: [Wolverhamptom,Liverpool], output: [1] },
+    { input: [Fulham,Luton], output: [0] },
+    { input: [Tottenham,Sheffield], output: [0] },
+    { input: [ManUnited,Brighton], output: [1] },
+    { input: [WestHam,ManCity], output: [1] },
+    { input: [AstonVilla,CrystalPalace], output: [0] },
+    { input: [Newcastle,Brentford], output: [0] },
+    { input: [Bournemount,Chelsea], output: [0.5] },
+    { input: [Everton,Arsenal], output: [1] },
+    { input: [Nottingham,Burnley], output: [0.5] }
+    //{ input: [CrystalPalace,Fulham], output: [1] },
+    //{ input: [ManCity,Nottingham], output: [0] },
+    //{ input: [Luton,Wolverhamptom], output: [0.5] },
+    //{ input: [Brentford,Everton], output: [0] },
+    //{ input: [Burnley,ManUnited], output: [0.5] }
+   
+   
+
+    
+
+    //https://visionx.jikasports.com/football/match-scores
+    
+]);
+
+
+                // Make a prediction
+                const output = net.run( [team1Value,team2Value]);
+                
+                
+                let predictionMessage;
+    if (output < 0.2) {
+        predictionMessage = `Prediction: Home Win`;
+    } else if (output > 0.8) {
+        predictionMessage =  `Prediction: Away Win`;
+    } else {
+        predictionMessage = `Prediction: Draw`;
+    }
+
+    const predictionElement = document.getElementById('prediction');
+    predictionElement.textContent = predictionMessage;
+            };
+
+            document.body.appendChild(script);
+        }
+
+        // Attach the predictMatch function to the button click event
+        document.getElementById('predictButton').addEventListener('click', predictMatch);
+    </script>
+      <script>
+        var typed = new Typed('#element', {
+          strings: ['2022-23 Season, Ops that season ended','2023-24 Season'],
+          typeSpeed:30,
+        backSpeed:30,
+        backDelay:1000,
+        loop:false
+        });
+      </script>
+       <script>
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent the form from submitting for demonstration purposes
+            var clickedButton = document.activeElement;
+            if (clickedButton && clickedButton.value === "Back") {
+                // Handle the login button click
+                window.location.href = "login.html"; // Redirect to the home page
+            } 
+        });
+    </script>
+</body>
+</html>

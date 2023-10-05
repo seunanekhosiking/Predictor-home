@@ -89,7 +89,7 @@
             width: 52%;
             font-size: 25px; 
             padding: 5px 10px;
-            animation: bounce 2s infinite;
+            
     
         }
         .head {
@@ -168,26 +168,65 @@
 .image-container {
     margin-top: 40px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 .bouncing-image {
-
     margin: 10px;
     transition: transform 1s ease-in-out;
-    animation: bounce 2s infinite;
+    animation: bounce 4s infinite;
     border-radius: 1000px;
 }
 
+.bouncing-logo1 {
+    margin: 10px;
+    transition: transform 1s ease-in-out;
+    animation: bounce1 4s infinite;
+    border-radius: 1000px;
+}
+.bouncing-logo1:hover {
+margin: 10px;
+transition: transform 1s ease-in-out;
+animation: bounce1 0s infinite;
+border-radius: 1000px;
+}
 
-
+.bouncing-logo12 {
+    margin: 10px;
+    transition: transform 1s ease-in-out;
+    animation: bounce12 4s infinite;
+    border-radius: 1000px;
+}
+.bouncing-logo12:hover {
+margin: 10px;
+transition: transform 1s ease-in-out;
+animation: bounce12 0s infinite;
+border-radius: 1000px;
+}
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
     }
     50% {
         transform: translateY(-15px);
+    }
+}
+
+@keyframes bounce1 {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(15px);
+    }
+}
+@keyframes bounce12 {
+    0%, 100% {
+        transform: translateX(15px);
+    }
+    50% {
+        transform: translateX(0);
     }
 }
     </style>
@@ -207,6 +246,7 @@
             <p><i><span id="element"></span></i></p>
             </div>
             </div>
+            
             <div class="image-container">       
                 <img class="bouncing-image" src="pick5.jpeg" alt="football" width="5%" height="5%">
                 <img class="bouncing-image" src="pick2.jpeg" alt="football" width="10%" height="10%">
@@ -214,13 +254,17 @@
                 <img class="bouncing-image" src="pick6.jpeg" alt="football" width="10%" height="10%">
                 <img class="bouncing-image" src="pick7.jpeg" alt="football" width="5%" height="5%">
             </div>
-            
             <div class="form">
-           <a href="Bundesliga.html"> <input type="submit" value="Bundesliga"></a>
-           <a href="index.html"><input type="submit" value="La-Liga"></a>
-            <a href="index.html"> <input type="submit" value="Premier-League"></a>
-            <a href="index.html"> <input type="submit" value="UEFA"></a>
-            <a href="index.html"> <input type="submit" value="Serie-A"></a>
+           <a href="Bundesliga.html"> <input type="submit" value="Bundesliga"><img class="bouncing-logo1" src="https://th.bing.com/th?id=OSB.6yeJKuPHYJicUW_ffu3dIg--.png&w=50&h=50&qlt=90&o=6&dpr=1.3&pid=BingSports" alt="football" width="5%" height="5%">
+           </a>
+           <a href="index.html"><input type="submit" value="La-Liga"> <img class="bouncing-logo12" src="https://th.bing.com/th?id=OSB.W5e5sm8YPV5nkKsw_yzBHg--.png&w=50&h=50&qlt=90&o=6&dpr=1.3&pid=BingSports" alt="football" width="5%" height="5%">
+           </a>
+            <a href="index.html"> <input type="submit" value="Premier-League"> <img class="bouncing-logo1" src="https://th.bing.com/th?id=OSB.9ZxSIExo340HqhwymNqFLw--.png&w=50&h=50&qlt=90&o=6&dpr=1.3&pid=BingSports" alt="football" width="5%" height="5%">
+            </a>
+            <a href="index.html"> <input type="submit" value="UEFA"> <img class="bouncing-logo12" src="https://th.bing.com/th?id=OSB.6jFpEpfLyqb3Y06c7rbmog--.png&w=50&h=50&qlt=90&o=6&dpr=1.3&pid=BingSports" alt="football" width="5%" height="5%">
+            </a>
+            <a href="index.html"> <input type="submit" value="Serie-A">  <img class="bouncing-logo1" src="https://th.bing.com/th?id=OSB.kBYdJkDvcKKUG6T0tC16sQ--.png&w=50&h=50&qlt=90&o=6&dpr=1.3&pid=BingSports" alt="football" width="5%" height="5%">
+            </a>
            
             <div class="Pics">
                  </div>
@@ -232,21 +276,11 @@
     </div>
     </section>
 </div>
-    
+<h4><i><span id="element2"></span></i></h4>
 <div class="footer-1">
     <div class="footer-2">
       
-       <h4>
-PremierTips, we harness the power of AI and neural network machine learning to bring you accurate football match predictions. Our cutting-edge technology analyzes vast amounts of historical data to provide you with insights that can help you make informed decisions when it comes to football betting.
 
-</h4>
-<h4>
-With our expertise in AI-driven prediction models, we strive to deliver the most reliable and up-to-date information on upcoming football matches. Whether you're a passionate football fan or a seasoned bettor, PremierTips is your go-to source for data-driven predictions that can enhance your football experience.
-</h4>
-<h4>
-Stay ahead of the game with PremierTips, where the future of football match predictions meets the power of AI.
- </h4>
- <h4>Disclaimer: Premier-Tips may produce inaccurate future match Prediction</h4>
     </div>
     <div class="footer-2">
         <a href="#"><i class='bx bxl-facebook'></i></a>
@@ -285,7 +319,19 @@ Stay ahead of the game with PremierTips, where the future of football match pred
           strings: ['wELCOME tO pREMIER tIPS','CHOOSE LEAGUE BELOW👇'],
           typeSpeed:15,
         backSpeed:5,
-        backDelay:1000,
+        backDelay:5000,
+        loop:true
+        });
+      </script>
+       <script>
+        var typed = new Typed('#element2', {
+          strings: ['PremierTips, we harness the power of AI and neural network machine learning to bring you accurate football match predictions. Our cutting-edge technology analyzes vast amounts of historical data to provide you with insights that can help you make informed decisions when it comes to football betting.',
+          'With our expertise in AI-driven prediction models, we strive to deliver the most reliable and up-to-date information on upcoming football matches. Whether you are a passionate football fan or a seasoned bettor, PremierTips is your go-to source for data-driven predictions that can enhance your football experience.',
+        'Stay ahead of the game with PremierTips, where the future of football match predictions meets the power of AI.',
+    'PremierTips, we harness the power of AI and neural network machine learning to bring you accurate football match predictions. Our cutting-edge technology analyzes vast amounts of historical data to provide you with insights that can help you make informed decisions when it comes to football betting. With our expertise in AI-driven prediction models, we strive to deliver the most reliable and up-to-date information on upcoming football matches. Whether you are a passionate football fan or a seasoned bettor, PremierTips is your go-to source for data-driven predictions that can enhance your football experience. Stay ahead of the game with PremierTips, where the future of football match predictions meets the power of AI. Disclaimer: Premier-Tips may produce inaccurate future match Prediction Disclaimer: Premier-Tips may produce inaccurate future match Prediction'],
+          typeSpeed:15,
+        backSpeed:5,
+        backDelay:5000,
         loop:false
         });
       </script>
